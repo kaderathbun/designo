@@ -1,0 +1,95 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.header {
+  position: relative;
+  height: 87px;
+
+  &__container {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $pri-color-white;
+    padding: 30px $padding-outside-mobile;
+  }
+  &__logo {
+    width: 202px;
+    height: auto;
+  }
+  &__hamburger-icon {
+    width: 24px;
+    height: auto;
+    align-self: start;
+    cursor: pointer;
+  }
+  &__menu {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    background: $pri-color-black;
+    padding: 30px $padding-outside-mobile;
+    max-height: 225px;
+    transform: translateY(-225px);
+    transition: all 0.25s ease-in;
+
+    &--active {
+      transform: translateY(0);
+    }
+  }
+  &__link {
+    height: auto;
+    text-decoration: none;
+    font-size: 2.4rem;
+    line-height: 25px;
+    letter-spacing: 2px;
+    color: $pri-color-white;
+    text-transform: uppercase;
+    padding-block: 15px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 117px;
+    &__container {
+      display: block;
+      padding: 45px $padding-outside-tablet;
+    }
+    &__hamburger-icon {
+      display: none;
+    }
+    &__menu {
+      position: static;
+      z-index: 999;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+      width: auto;
+      transform: translate(0);
+      padding: 0;
+      padding-right: $padding-outside-tablet;
+      background: transparent;
+    }
+    &__link {
+      font-size: 1.4rem;
+      color: $pri-color-black;
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    width: $width-desktop;
+    margin: 0 auto;
+  }
+}

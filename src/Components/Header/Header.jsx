@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 //styles
 import './Header.scss'
-import logo from '../assets/shared/desktop/logo-dark.png'
-import navHamburgerIcon from '../assets/shared/mobile/icon-hamburger.svg'
-import navCloseIcon from '../assets/shared/mobile/icon-close.svg'
+import logo from '../../assets/shared/desktop/logo-dark.png'
+import navHamburgerIcon from '../../assets/shared/mobile/icon-hamburger.svg'
+import navCloseIcon from '../../assets/shared/mobile/icon-close.svg'
 
 export default function Header() {
   //mobile logic
@@ -15,7 +15,7 @@ export default function Header() {
   }
 
   return (
-    <header className="header">
+    <nav className="header">
       <div className="header__container">
         <img src={logo} alt="Designo" className="header__logo" />
         <img
@@ -34,6 +34,6 @@ export default function Header() {
         <Link className="header__link">Locations</Link>
         <Link className="header__link">Contact</Link>
       </ul>
-    </header>
+    </nav>
   )
 }
