@@ -1,0 +1,8 @@
+@import '../src/scss/variables';
+@import '../src/scss/mixins';
+
+body {
+  font-family: $font;
+  font-weight: $weight-body;
+  color: $pri-color-black;
+}
