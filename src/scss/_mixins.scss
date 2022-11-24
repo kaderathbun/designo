@@ -1,0 +1,17 @@
+// buttons
+@mixin btn {
+  position: relative;
+  z-index: 999;
+  font-size: 1.5rem;
+  font-weight: $weight-heading;
+  line-height: 1px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: $sec-color-black;
+  background-color: $pri-color-white;
+  padding-block: 25px;
+  border-radius: 10px;
+  width: 152px;
+}

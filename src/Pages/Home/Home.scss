@@ -37,20 +37,7 @@
       text-align: center;
     }
     &__cta {
-      display: block;
-      position: relative;
-      z-index: 999;
-      font-size: 1.5rem;
-      font-weight: $weight-heading;
-      line-height: 1px;
-      text-decoration: none;
-      text-align: center;
-      text-transform: uppercase;
-      color: $pri-color-black;
-      width: 152px;
-      padding: 25px 20px;
-      background: $pri-color-white;
-      border-radius: 8px;
+      @include btn;
       align-self: center;
     }
     &__img {
@@ -65,9 +52,39 @@
       max-width: none;
     }
   }
+}
 
-  .projects {
-    
+// Project section scss located in component scss
+.qualities {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  padding-inline: 20px;
+  margin-bottom: 150px;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
-
+  &__img {
+    background-image: url('../../assets/shared/desktop/bg-pattern-small-circle.svg');
+  }
+  &__heading {
+    font-size: 2rem;
+    font-weight: $weight-heading;
+    line-height: 26px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $sec-color-black;
+  }
+  &__sub-heading {
+    font-size: 1.6rem;
+    font-weight: $weight-body;
+    line-height: 26px;
+    letter-spacing: 0;
+    text-align: center;
+    color: $sec-color-black;
+  }
 }

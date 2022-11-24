@@ -1,0 +1,107 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.footer {
+  background: linear-gradient(
+    180deg,
+    rgba($pri-color-white, 1) 17%,
+    rgba($pri-color-black, 1) 17%
+  );
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: 379px;
+    margin-inline: 20px;
+    background: $pri-color-peach;
+    padding: 50px 25px;
+    background-image: url('../../assets/shared/desktop/bg-pattern-call-to-action.svg');
+    background-position: right center;
+    border-radius: 10px;
+  }
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: $weight-heading;
+    line-height: 36px;
+    letter-spacing: 0;
+    text-align: center;
+    color: $pri-color-white;
+  }
+  &__sub-heading {
+    font-size: 1.5rem;
+    font-weight: $weight-body;
+    line-height: 25px;
+    letter-spacing: 0;
+    text-align: center;
+    color: $pri-color-white;
+  }
+  &__cta {
+    @include btn;
+  }
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-block: 50px;
+  }
+  &__logo {
+    width: 202px;
+    height: auto;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    padding-block: 20px;
+    margin: 0 auto;
+    border-top: 2px solid $sec-color-black;
+
+    & > a {
+      font-size: 1.4rem;
+      font-weight: $weight-body;
+      line-height: 14px;
+      letter-spacing: 2px;
+      color: $pri-color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding-block: 15px;
+    }
+  }
+  &__bold {
+    font-weight: $weight-heading !important;
+  }
+  &__location-container,
+  &__contact-container {
+    font-size: 1.6rem;
+    line-height: 26px;
+    font-style: normal;
+    color: rgba($pri-color-white, 0.5);
+    text-align: center;
+
+    & > span {
+      font-weight: $weight-body;
+    }
+  }
+  &__location-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contact-container {
+    display: flex;
+    flex-direction: column;
+
+    & > a {
+      color: rgba($pri-color-white, 0.5);
+      text-decoration: none;
+    }
+  }
+  &__social-nav {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
