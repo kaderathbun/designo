@@ -13,7 +13,7 @@
     align-items: center;
     gap: 30px;
     height: 379px;
-    margin-inline: 20px;
+    margin-inline: $padding-outside-mobile;
     background: $pri-color-peach;
     padding: 50px 25px;
     background-image: url('../../assets/shared/desktop/bg-pattern-call-to-action.svg');

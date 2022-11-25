@@ -10,19 +10,28 @@ import twitter from '../../assets/shared/desktop/icon-twitter.svg'
 import pinterest from '../../assets/shared/desktop/icon-pinterest.svg'
 import instagram from '../../assets/shared/desktop/icon-instagram.svg'
 
-export default function Footer() {
+export default function Footer({ isSecondary }) {
   return (
-    <footer className="footer">
-      <div className="footer__card">
-        <h3 className="footer__heading">Let’s talk about your project</h3>
-        <p className="footer__sub-heading">
-          Ready to take it to the next level? Contact us today and find out how
-          our expertise can help your business grow.
-        </p>
-        <a href="#" className="footer__cta">
-          Get in Touch
-        </a>
-      </div>
+    <footer
+      className="footer"
+      style={{
+        background: !isSecondary
+          ? 'linear-gradient(180deg, rgba(#fff, 1) 17%, rgba(#1d1c1e) 17%)'
+          : '#1d1c1e',
+      }}
+    >
+      {!isSecondary ? (
+        <div className="footer__card">
+          <h3 className="footer__heading">Let’s talk about your project</h3>
+          <p className="footer__sub-heading">
+            Ready to take it to the next level? Contact us today and find out
+            how our expertise can help your business grow.
+          </p>
+          <a href="#" className="footer__cta">
+            Get in Touch
+          </a>
+        </div>
+      ) : null}
       <div className="footer__info-container">
         <img src={logo} alt="" className="footer__logo" />
         <ul className="footer__nav">

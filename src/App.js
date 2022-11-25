@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //styles
 import './App.scss'
-import Footer from './Components/Footer/Footer'
 
 //components
 import Header from './Components/Header/Header'
@@ -18,7 +17,6 @@ function App() {
         <Routes>
           <Route index path="/" element={<Home />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   )
