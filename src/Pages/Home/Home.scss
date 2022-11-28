@@ -12,15 +12,9 @@
     background: $pri-color-peach;
     overflow: hidden;
     padding: 75px $padding-outside-mobile;
-
-    &::after {
-      position: relative;
-      z-index: -1;
-      content: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
-      top: 0;
-      left: -20px;
-      transform: translateY(-50%);
-    }
+    background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
 
     &__heading {
       font-size: 3.2rem;
@@ -60,7 +54,7 @@
   flex-direction: column;
   gap: 75px;
   padding-inline: $padding-outside-mobile;
-  margin-bottom: 150px;
+  margin-bottom: $margin-block-mobile;
 
   &__card {
     display: flex;

@@ -8,6 +8,7 @@ import Header from './Components/Header/Header'
 
 //pages
 import Home from './Pages/Home/Home'
+import WebDesign from './Pages/WebDesign/WebDesign'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route index path="/" element={<Home />} />
+          <Route path="/web-design" element={<WebDesign />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import './Home.scss'
 
 //components
-import ProjectCards from '../../Components/ProjectCard/ProjectCards'
+import ProjectCards from '../../Components/ProjectCards/ProjectCards'
 import Footer from '../../Components/Footer/Footer'
 
 export default function Home() {

@@ -1,0 +1,34 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.hero {
+  .hero__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    height: 320px;
+    background: $pri-color-peach;
+    background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-inline: $padding-outside-mobile;
+  }
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: $weight-heading;
+    line-height: 36px;
+    color: $pri-color-white;
+    text-align: center;
+  }
+  &__sub-heading {
+    font-size: 1.5rem;
+    font-weight: $weight-body;
+    line-height: 25px;
+    color: $pri-color-white;
+    text-align: center;
+  }
+}

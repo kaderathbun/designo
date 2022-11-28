@@ -22,7 +22,7 @@ const cards = [
   },
 ]
 
-export default function ProjectsCard() {
+export default function ProjectsCards() {
   return cards.map((card) => {
     return (
       <div key={card.heading} className="projects__card">
