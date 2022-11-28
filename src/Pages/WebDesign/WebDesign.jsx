@@ -8,13 +8,17 @@ import photon from '../../assets/web-design/desktop/image-photon.jpg'
 import builder from '../../assets/web-design/desktop/image-builder.jpg'
 import blogr from '../../assets/web-design/desktop/image-blogr.jpg'
 import camp from '../../assets/web-design/desktop/image-camp.jpg'
+import appDesign from '../../assets/home/mobile/image-app-design.jpg'
+import graphicDesign from '../../assets/home/mobile/image-graphic-design.jpg'
 
 //components
 import HeroCard from '../../Components/HeroCard/HeroCard'
 import WorksCards from '../../Components/WorksCards/WorksCards'
+import ProjectsCards from '../../Components/ProjectCards/ProjectCards'
+import Footer from '../../Components/Footer/Footer'
 
 //data
-const cards = [
+const worksCards = [
   {
     image: express,
     heading: 'Express',
@@ -50,28 +54,51 @@ const cards = [
       'Get expert training in coding, data, design, and digital marketing',
   },
 ]
+const projectCards = [
+  {
+    background: appDesign,
+    heading: 'App Design',
+  },
+  {
+    background: graphicDesign,
+    heading: 'Graphic Design',
+  },
+]
 
 export default function WebDesign() {
   return (
-    <main className="web-design">
-      <section className="hero">
-        <HeroCard
-          heading="Web Design"
-          subHeading="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-        />
-      </section>
-      <section className="works">
-        {cards.map((card) => {
-          return (
-            <WorksCards
-              key={card.heading}
-              image={card.image}
-              heading={card.heading}
-              subHeading={card.subHeading}
-            />
-          )
-        })}
-      </section>
-    </main>
+    <React.Fragment>
+      <main className="web-design">
+        <section className="hero">
+          <HeroCard
+            heading="Web Design"
+            subHeading="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+          />
+        </section>
+        <section className="works">
+          {worksCards.map((card) => {
+            return (
+              <WorksCards
+                key={card.heading}
+                image={card.image}
+                heading={card.heading}
+                subHeading={card.subHeading}
+              />
+            )
+          })}
+        </section>
+        <section className="projects">
+          {projectCards.map((card) => {
+            return (
+              <ProjectsCards
+                heading={card.heading}
+                background={card.background}
+              />
+            )
+          })}
+        </section>
+      </main>
+      <Footer isSecondary={false} />
+    </React.Fragment>
   )
 }

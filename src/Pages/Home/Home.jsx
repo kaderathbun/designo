@@ -3,10 +3,29 @@ import { Link } from 'react-router-dom'
 
 //styles
 import './Home.scss'
+import webDesign from '../../assets/home/mobile/image-web-design.jpg'
+import appDesign from '../../assets/home/mobile/image-app-design.jpg'
+import graphicDesign from '../../assets/home/mobile/image-graphic-design.jpg'
 
 //components
 import ProjectCards from '../../Components/ProjectCards/ProjectCards'
 import Footer from '../../Components/Footer/Footer'
+
+// card data
+const projectCards = [
+  {
+    background: webDesign,
+    heading: 'Web Design',
+  },
+  {
+    background: appDesign,
+    heading: 'App Design',
+  },
+  {
+    background: graphicDesign,
+    heading: 'Graphic Design',
+  },
+]
 
 export default function Home() {
   return (
@@ -29,7 +48,14 @@ export default function Home() {
           />
         </section>
         <section className="projects">
-          <ProjectCards />
+          {projectCards.map((card) => {
+            return (
+              <ProjectCards
+                heading={card.heading}
+                background={card.background}
+              />
+            )
+          })}
         </section>
         <section className="qualities">
           <div className="qualities__card">
