@@ -48,8 +48,8 @@ export default function GraphicDesign() {
       <main className="web-design">
         <section className="hero">
           <HeroCard
-            heading="Web Design"
-            subHeading="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+            heading="Graphic Design"
+            subHeading="We deliver eye-catching branding materials that are tailored to meet your business objectives."
           />
         </section>
         <section className="works">
