@@ -63,8 +63,8 @@ export default function AppDesign() {
       <main className="web-design">
         <section className="hero">
           <HeroCard
-            heading="Web Design"
-            subHeading="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+            heading="App Design"
+            subHeading="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
           />
         </section>
         <section className="works">
