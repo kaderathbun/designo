@@ -1,2 +1,37 @@
 @import '/src/scss/variables';
 @import '/src/scss/mixins';
+
+// Mission section in component scss
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+  margin-bottom: $margin-block-mobile;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__image {
+    background-image: url('../../assets/shared/desktop/bg-pattern-small-circle.svg');
+  }
+  &__heading {
+    font-size: 2rem;
+    font-weight: $weight-heading;
+    line-height: 26px;
+    letter-spacing: 5px;
+    color: $pri-color-black;
+    text-transform: uppercase;
+  }
+  &__cta {
+    @include btn;
+    background-color: $pri-color-peach;
+    color: $pri-color-white;
+  }
+}

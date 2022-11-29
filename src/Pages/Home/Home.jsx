@@ -48,9 +48,10 @@ export default function Home() {
           />
         </section>
         <section className="projects">
-          {projectCards.map((card) => {
+          {projectCards.map((card, idx) => {
             return (
               <ProjectCards
+                key={idx}
                 heading={card.heading}
                 background={card.background}
               />
