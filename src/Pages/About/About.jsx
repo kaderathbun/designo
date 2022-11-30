@@ -5,30 +5,12 @@ import './About.scss'
 import hero from '../../assets/about/mobile/image-about-hero.jpg'
 import talent from '../../assets/about/mobile/image-world-class-talent.jpg'
 import realDeal from '../../assets/about/mobile/image-real-deal.jpg'
-import canada from '../../assets/shared/desktop/illustration-canada.svg'
-import australia from '../../assets/shared/desktop/illustration-australia.svg'
-import uk from '../../assets/shared/desktop/illustration-united-kingdom.svg'
 
 //components
 import HeroCard from '../../Components/HeroCard/HeroCard'
 import AboutCards from '../../Components/AboutCards/AboutCards'
 import Footer from '../../Components/Footer/Footer'
-
-//data
-const locations = [
-  {
-    country: 'Canada',
-    image: canada,
-  },
-  {
-    country: 'Australia',
-    image: australia,
-  },
-  {
-    country: 'Uniited Kingdom',
-    image: uk,
-  },
-]
+import LocationCards from '../../Components/LocationCards/LocationCards'
 
 export default function About() {
   return (
@@ -58,21 +40,7 @@ export default function About() {
           </AboutCards>
         </section>
         <section className="locations">
-          {locations.map((location, idx) => {
-            return (
-              <div key={idx} className="locations__card">
-                <img
-                  className="locations__image"
-                  src={location.image}
-                  alt={location.country}
-                />
-                <h2 className="locations__heading">{location.country}</h2>
-                <a className="locations__cta" href="#">
-                  See Location
-                </a>
-              </div>
-            )
-          })}
+          <LocationCards />
         </section>
         <section className="mission">
           <AboutCards image={realDeal} heading="The real deal">

@@ -4,7 +4,7 @@ import React from 'react'
 import './Locations.scss'
 
 // components
-import LocationCards from '../../Components/LocationCards/LocationCards'
+import LocationCards from '../../Components/MapCards/MapCards'
 import Footer from '../../Components/Footer/Footer'
 
 export default function Locations() {
