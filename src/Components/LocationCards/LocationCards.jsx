@@ -44,7 +44,7 @@ export default function LocationCards() {
   return locations.map((location) => {
     return (
       <React.Fragment key={location.lat}>
-        <div className="locations__card">
+        <div className="map__card">
           <MapContainer
             center={[location.lat, location.long]}
             zoom={13}
@@ -64,17 +64,19 @@ export default function LocationCards() {
               </Popup>
             </Marker>
           </MapContainer>
-          <h2>{location.country}</h2>
-          <address className="locations__location-container">
-            <span className="locations__bold">{location.office}</span>
-            <span>{location.street}</span>
-            <span>{location.city}</span>
-          </address>
-          <address className="locations__contact-container">
-            <span className="locations__bold">Contact Us</span>
-            <a href="tel:+1253-863-8967">{location.phone}</a>
-            <a href="mailto: contact@designo.co">{location.email}</a>
-          </address>
+          <div className="map__location-container">
+            <h2 className="map__heading">{location.country}</h2>
+            <address className="map__address-container">
+              <span className="map__bold">{location.office}</span>
+              <span>{location.street}</span>
+              <span>{location.city}</span>
+            </address>
+            <address className="map__contact-container">
+              <span className="map__bold">Contact Us</span>
+              <a href="tel:+1253-863-8967">{location.phone}</a>
+              <a href="mailto: contact@designo.co">{location.email}</a>
+            </address>
+          </div>
         </div>
       </React.Fragment>
     )

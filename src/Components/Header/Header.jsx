@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 //styles
@@ -10,6 +10,16 @@ import navCloseIcon from '../../assets/shared/mobile/icon-close.svg'
 export default function Header() {
   //mobile logic
   const [isOpen, setIsOpen] = useState(false)
+
+  //disable scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'initial'
+    }
+  }, [isOpen])
+
   const handleClick = () => {
     setIsOpen(!isOpen)
   }
