@@ -1,22 +1,24 @@
 @import '/src/scss/variables';
 @import '/src/scss/mixins';
 
-input,
-textarea {
-  display: block;
-  width: 100%;
+.error {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: $weight-body;
+  line-height: 26px;
+  font-style: italic;
+  top: 30px;
+  right: 15px;
   color: $pri-color-white;
 
-  &::placeholder {
-    color: rgba($pri-color-white, 0.5);
+  &::after {
+    margin-left: 10px;
+    content: url('../../assets/contact/desktop/icon-error.svg');
+    width: 20px;
+    height: 20px;
   }
-}
-
-textarea {
-  resize: vertical;
-  height: auto;
-  min-height: 100px;
-  max-height: 200px;
 }
 
 .contact {
@@ -54,18 +56,36 @@ textarea {
       color: $pri-color-white;
       text-align: center;
     }
+    &__inputs {
+      margin-top: 30px;
+    }
     &__cta {
       @include btn;
       display: block;
       margin: 0 auto;
       margin-top: 30px;
     }
+    fieldset {
+      position: relative;
+      border: none;
+    }
     input,
     textarea {
+      display: block;
+      width: 100%;
+      color: $pri-color-white;
       padding: 30px 15px 15px;
       border: none;
       border-bottom: 1px solid $pri-color-white;
       background-color: transparent;
+
+      &::placeholder {
+        color: rgba($pri-color-white, 0.5);
+      }
+      &:focus-visible {
+        outline: none;
+        border-bottom: 2px solid $pri-color-white;
+      }
     }
   }
 }

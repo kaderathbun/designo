@@ -15,10 +15,10 @@ const phoneRegExp =
 
 export default function Contact() {
   const schema = yup.object().shape({
-    name: yup.string().required(),
-    email: yup.string().email().required(),
-    phone: yup.string().matches(phoneRegExp, 'Phone number is not valid'),
-    message: yup.string().min(10).max(250).required(),
+    name: yup.string().required("Can't be empty!"),
+    email: yup.string().email().required('Email Invalid'),
+    phone: yup.string().matches(phoneRegExp, "Can't be empty!"),
+    message: yup.string().required("Can't be empty!"),
   })
 
   const {
@@ -29,7 +29,8 @@ export default function Contact() {
     resolver: yupResolver(schema),
   })
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
+    e.preventDefault()
     console.log(data)
   }
 
@@ -48,15 +49,43 @@ export default function Contact() {
               </p>
             </div>
             <form className="form__inputs" onSubmit={handleSubmit(onSubmit)}>
-              <input type="text" placeholder="Name" {...register('name')} />
-              <input type="email" placeholder="Email" {...register('email')} />
-              <input type="number" placeholder="Phone" {...register('phone')} />
-              <textarea
-                cols="30"
-                rows="5"
-                placeholder="Your Message"
-                {...register('message')}
-              />
+              <fieldset>
+                <input type="text" placeholder="Name" {...register('name')} />
+                {errors.name ? (
+                  <p className="error">{errors.name?.message}</p>
+                ) : null}
+              </fieldset>
+              <fieldset>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  {...register('email')}
+                />
+                {errors.email ? (
+                  <p className="error">{errors.email?.message}</p>
+                ) : null}
+              </fieldset>
+              <fieldset>
+                <input
+                  type="number"
+                  placeholder="Phone"
+                  {...register('phone')}
+                />
+                {errors.phone ? (
+                  <p className="error">{errors.phone?.message}</p>
+                ) : null}
+              </fieldset>
+              <fieldset>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  placeholder="Your Message"
+                  {...register('message')}
+                />
+                {errors.message ? (
+                  <p className="error">{errors.message?.message}</p>
+                ) : null}
+              </fieldset>
               <button className="form__cta">Submit</button>
             </form>
           </div>
@@ -69,5 +98,3 @@ export default function Contact() {
     </React.Fragment>
   )
 }
-
-// <p>{errors.name?.message}</p>
