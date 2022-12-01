@@ -27,17 +27,17 @@ export default function Footer({ isSecondary }) {
             Ready to take it to the next level? Contact us today and find out
             how our expertise can help your business grow.
           </p>
-          <a href="#" className="footer__cta">
+          <Link to="/contact" className="footer__cta">
             Get in Touch
-          </a>
+          </Link>
         </div>
       ) : null}
       <div className="footer__info-container">
         <img src={logo} alt="" className="footer__logo" />
         <ul className="footer__nav">
-          <Link>Our Company</Link>
-          <Link>Locations</Link>
-          <Link>Contact</Link>
+          <Link to="/about">Our Company</Link>
+          <Link to="/locations">Locations</Link>
+          <Link to="/contact">Contact</Link>
         </ul>
         <address className="footer__location-container">
           <span className="footer__bold">Designo Centeral Office</span>
@@ -50,19 +50,19 @@ export default function Footer({ isSecondary }) {
           <a href="mailto: contact@designo.co">contact@designo.co</a>
         </address>
         <div className="footer__social-nav">
-          <a href="#">
+          <a href="https://www.facebook.com">
             <img src={facebook} alt="facebook" />
           </a>
-          <a href="#">
+          <a href="https://www.youtube.com">
             <img src={youtube} alt="youtube" />
           </a>
-          <a href="#">
+          <a href="https://www.twitter.com">
             <img src={twitter} alt="twitter" />
           </a>
-          <a href="#">
+          <a href="https://www.pinterest.com">
             <img src={pinterest} alt="pinterest" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com">
             <img src={instagram} alt="instagram" />
           </a>
         </div>

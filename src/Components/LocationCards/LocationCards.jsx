@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 //styles
 import './LocationCards.scss'
@@ -34,9 +35,9 @@ export default function LocationCards() {
               alt={location.country}
             />
             <h2 className="locations__heading">{location.country}</h2>
-            <a className="locations__cta" href="#">
+            <Link to="/locations" className="locations__cta">
               See Location
-            </a>
+            </Link>
           </div>
         )
       })}

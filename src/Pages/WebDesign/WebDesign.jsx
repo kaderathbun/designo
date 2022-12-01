@@ -58,10 +58,12 @@ const projectCards = [
   {
     background: appDesign,
     heading: 'App Design',
+    href: '/app-design',
   },
   {
     background: graphicDesign,
     heading: 'Graphic Design',
+    href: '/graphic-design',
   },
 ]
 
@@ -76,10 +78,10 @@ export default function WebDesign() {
           />
         </section>
         <section className="works">
-          {worksCards.map((card) => {
+          {worksCards.map((card, idx) => {
             return (
               <WorksCards
-                key={card.heading}
+                key={idx}
                 image={card.image}
                 heading={card.heading}
                 subHeading={card.subHeading}
@@ -88,11 +90,13 @@ export default function WebDesign() {
           })}
         </section>
         <section className="projects">
-          {projectCards.map((card) => {
+          {projectCards.map((card, idx) => {
             return (
               <ProjectsCards
+                key={idx}
                 heading={card.heading}
                 background={card.background}
+                href={card.href}
               />
             )
           })}

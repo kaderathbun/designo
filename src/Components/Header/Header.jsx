@@ -27,7 +27,9 @@ export default function Header() {
   return (
     <nav className="header">
       <div className="header__container">
-        <img src={logo} alt="Designo" className="header__logo" />
+        <Link to="/">
+          <img src={logo} alt="Designo" className="header__logo" />
+        </Link>
         <img
           src={isOpen ? navCloseIcon : navHamburgerIcon}
           alt=""
@@ -40,9 +42,15 @@ export default function Header() {
           isOpen ? 'header__menu header__menu--active' : 'header__menu'
         }
       >
-        <Link className="header__link">Our Company</Link>
-        <Link className="header__link">Locations</Link>
-        <Link className="header__link">Contact</Link>
+        <Link to="/about" className="header__link">
+          Our Company
+        </Link>
+        <Link to="/locations" className="header__link">
+          Locations
+        </Link>
+        <Link to="/contact" className="header__link">
+          Contact
+        </Link>
       </ul>
     </nav>
   )

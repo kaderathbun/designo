@@ -16,14 +16,17 @@ const projectCards = [
   {
     background: webDesign,
     heading: 'Web Design',
+    href: '/web-design',
   },
   {
     background: appDesign,
     heading: 'App Design',
+    href: '/app-design',
   },
   {
     background: graphicDesign,
     heading: 'Graphic Design',
+    href: '/graphic-design',
   },
 ]
 
@@ -54,6 +57,7 @@ export default function Home() {
                 key={idx}
                 heading={card.heading}
                 background={card.background}
+                href={card.href}
               />
             )
           })}
