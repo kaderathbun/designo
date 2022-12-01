@@ -1,0 +1,71 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  color: $pri-color-white;
+
+  &::placeholder {
+    color: rgba($pri-color-white, 0.5);
+  }
+}
+
+textarea {
+  resize: vertical;
+  height: auto;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.contact {
+  .form {
+    height: 764px;
+    background-color: $pri-color-peach;
+    background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-bottom: $margin-block-mobile;
+
+    &__form-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 70px $padding-outside-mobile;
+    }
+    &__hero-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    &__heading {
+      font-size: 3.2rem;
+      font-weight: $weight-heading;
+      line-height: 36px;
+      color: $pri-color-white;
+      text-align: center;
+    }
+    &__sub-heading {
+      font-size: 1.5rem;
+      font-weight: $weight-body;
+      line-height: 25px;
+      color: $pri-color-white;
+      text-align: center;
+    }
+    &__cta {
+      @include btn;
+      display: block;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+    input,
+    textarea {
+      padding: 30px 15px 15px;
+      border: none;
+      border-bottom: 1px solid $pri-color-white;
+      background-color: transparent;
+    }
+  }
+}
