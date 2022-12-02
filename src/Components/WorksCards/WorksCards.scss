@@ -46,3 +46,23 @@
     text-align: center;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .works {
+    margin-inline: $margin-outside-tablet;
+
+    &__card {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__image {
+      width: 339px;
+      height: 310px;
+    }
+    &__container {
+      height: 100%;
+      padding: $margin-outside-tablet;
+    }
+  }
+}
