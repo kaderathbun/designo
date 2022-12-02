@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useMediaQuery } from 'react-responsive'
 
 //styles
 import './Home.scss'
 import webDesign from '../../assets/home/mobile/image-web-design.jpg'
 import appDesign from '../../assets/home/mobile/image-app-design.jpg'
 import graphicDesign from '../../assets/home/mobile/image-graphic-design.jpg'
+import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
+import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
+import graphicDesignTablet from '../../assets/home/tablet/image-graphic-design.jpg'
 
 //components
 import ProjectCards from '../../Components/ProjectCards/ProjectCards'
@@ -15,22 +19,27 @@ import Footer from '../../Components/Footer/Footer'
 const projectCards = [
   {
     background: webDesign,
+    backgroundTablet: webDesignTablet,
     heading: 'Web Design',
     href: '/web-design',
   },
   {
     background: appDesign,
+    backgroundTablet: appDesignTablet,
     heading: 'App Design',
     href: '/app-design',
   },
   {
     background: graphicDesign,
+    backgroundTablet: graphicDesignTablet,
     heading: 'Graphic Design',
     href: '/graphic-design',
   },
 ]
 
 export default function Home() {
+  const isTablet = useMediaQuery({ query: '(max-width: 767px)' })
+
   return (
     <React.Fragment>
       <main className="home">
@@ -56,7 +65,7 @@ export default function Home() {
               <ProjectCards
                 key={idx}
                 heading={card.heading}
-                background={card.background}
+                background={isTablet ? card.background : card.backgroundTablet}
                 href={card.href}
               />
             )
@@ -72,12 +81,14 @@ export default function Home() {
               alt="idk"
               className="qualities__img"
             />
-            <h2 className="qualities__heading">Passionate</h2>
-            <p className="qualities__sub-heading">
-              Each project starts with an in-depth brand research to ensure we
-              only create products that serve a purpose. We merge art, design,
-              and technology into exciting new solutions.
-            </p>
+            <div className="qualities__wrapper">
+              <h2 className="qualities__heading">Passionate</h2>
+              <p className="qualities__sub-heading">
+                Each project starts with an in-depth brand research to ensure we
+                only create products that serve a purpose. We merge art, design,
+                and technology into exciting new solutions.
+              </p>
+            </div>
           </div>
           <div className="qualities__card">
             <img
@@ -88,12 +99,15 @@ export default function Home() {
               alt=""
               className="qualities__img"
             />
-            <h2 className="qualities__heading">Resourceful</h2>
-            <p className="qualities__sub-heading">
-              Everything that we do has a strategic purpose. We use an agile
-              approach in all of our projects and value customer collaboration.
-              It guarantees superior results that fulfill our clients’ needs.
-            </p>
+            <div className="qualities__wrapper">
+              <h2 className="qualities__heading">Resourceful</h2>
+              <p className="qualities__sub-heading">
+                Everything that we do has a strategic purpose. We use an agile
+                approach in all of our projects and value customer
+                collaboration. It guarantees superior results that fulfill our
+                clients’ needs.
+              </p>
+            </div>
           </div>
           <div className="qualities__card">
             <img
@@ -104,12 +118,14 @@ export default function Home() {
               alt=""
               className="qualities__img"
             />
-            <h2 className="qualities__heading">Friendly</h2>
-            <p className="qualities__sub-heading">
-              We are a group of enthusiastic folks who know how to put people
-              first. Our success depends on our customers, and we strive to give
-              them the best experience a company can provide.
-            </p>
+            <div className="qualities__wrapper">
+              <h2 className="qualities__heading">Friendly</h2>
+              <p className="qualities__sub-heading">
+                We are a group of enthusiastic folks who know how to put people
+                first. Our success depends on our customers, and we strive to
+                give them the best experience a company can provide.
+              </p>
+            </div>
           </div>
         </section>
       </main>
