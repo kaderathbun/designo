@@ -2,31 +2,31 @@
 @import '/src/scss/mixins';
 
 .mission {
-  margin-bottom: $margin-block-mobile;
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 35px;
-    height: 545px;
-    padding-inline: $padding-outside-mobile;
-    background-color: #fdf3f0;
-    background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
-    background-position: top center;
+    padding: 75px $padding-outside-mobile;
+    background-color: $pri-color-peach;
+    background-image: url('../../assets/shared/desktop/bg-pattern-small-circle.svg');
+    background-position: top -150px right 0px;
+    background-repeat: no-repeat;
+    background-size: 80%;
   }
   &__heading {
     font-size: 3.2rem;
     font-weight: $weight-heading;
     line-height: 36px;
-    color: $pri-color-peach;
+    color: $pri-color-white;
     text-align: center;
   }
   &__sub-heading {
     font-size: 1.5rem;
     font-weight: $weight-body;
     line-height: 25px;
-    color: $pri-color-black;
+    color: $pri-color-white;
     text-align: center;
   }
 }

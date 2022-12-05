@@ -7,7 +7,6 @@ import talent from '../../assets/about/mobile/image-world-class-talent.jpg'
 import realDeal from '../../assets/about/mobile/image-real-deal.jpg'
 
 //components
-import HeroCard from '../../Components/HeroCard/HeroCard'
 import AboutCards from '../../Components/AboutCards/AboutCards'
 import Footer from '../../Components/Footer/Footer'
 import LocationCards from '../../Components/LocationCards/LocationCards'
@@ -16,17 +15,24 @@ export default function About() {
   return (
     <React.Fragment>
       <main className="about">
-        <section className="hero">
-          <img src={hero} alt="Team meeting" />
-          <HeroCard
-            heading="About Us"
-            subHeading="Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences."
-            isSecondary={true}
-          />
+        <section className="mission">
+          <AboutCards image={hero} heading="About Us" isSecondary={false}>
+            <p className="mission__sub-heading">
+              Founded in 2010, we are a creative agency that produces lasting
+              results for our clients. We’ve partnered with many startups,
+              corporations, and nonprofits alike to craft designs that make real
+              impact. We’re always looking forward to creating brands, products,
+              and digital experiences that connect with our clients’ audiences.
+            </p>
+          </AboutCards>
         </section>
         <section className="mission">
-          <AboutCards image={talent} heading="World-class talent">
-            <p className="mission__sub-heading">
+          <AboutCards
+            image={talent}
+            heading="World-class talent"
+            isSecondary={true}
+          >
+            <p className="mission__sub-heading" style={{ color: '#333136' }}>
               We are a crew of strategists, problem-solvers, and technologists.
               Every design is thoughtfully crafted from concept to launch,
               ensuring success in its given market. We are constantly updating

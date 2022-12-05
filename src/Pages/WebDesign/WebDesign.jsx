@@ -68,11 +68,13 @@ const projectCards = [
 ]
 
 export default function WebDesign() {
+
   return (
     <React.Fragment>
       <main className="web-design">
         <section className="hero">
           <HeroCard
+            isSecondary={false}
             heading="Web Design"
             subHeading="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
           />
