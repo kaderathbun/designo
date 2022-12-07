@@ -60,9 +60,10 @@
     justify-content: space-between;
     align-items: center;
     height: 150px;
+
     &__container {
       display: block;
-      padding: 45px $margin-outside-tablet;
+      padding: 45px 0;
     }
     &__hamburger-icon {
       display: none;
@@ -76,7 +77,6 @@
       width: auto;
       transform: translate(0);
       padding: 0;
-      padding-right: $margin-outside-tablet;
       background: transparent;
     }
     &__link {

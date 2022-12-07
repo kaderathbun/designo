@@ -52,7 +52,9 @@ export default function Home() {
             fully responsive websites, app design, and engaging brand
             experiences. Find out more about our services.
           </p>
-          <Link className="hero__cta">Learn More</Link>
+          <Link to="/about" className="hero__cta">
+            Learn More
+          </Link>
           <img
             src={require('../../assets/home/desktop/image-hero-phone.png')}
             alt=""

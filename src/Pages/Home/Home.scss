@@ -18,7 +18,7 @@
 
     &__heading {
       font-size: 3.2rem;
-      font-weight: $weight-body;
+      font-weight: $weight-heading;
       line-height: 36px;
       color: $pri-color-white;
       text-align: center;
@@ -110,8 +110,6 @@
     }
   }
 
-  // Project section scss located in component scss
-
   .qualities {
     padding-inline: $margin-outside-tablet;
 
@@ -127,6 +125,69 @@
     }
     &__sub-heading {
       text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .home {
+    &::before {
+      position: absolute;
+      content: url('../../assets/shared/desktop/bg-pattern-leaf.svg');
+      top: 1850px;
+      right: 0;
+      z-index: -1;
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: url('../../assets/shared/desktop/bg-pattern-leaf.svg');
+      top: 460px;
+      left: 0;
+      z-index: -1;
+    }
+
+    .hero {
+      width: $width-desktop;
+      height: 640px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content min-content;
+      place-content: center;
+      gap: 40px;
+      background-position: right center;
+      padding-inline: $padding-outside-desktop;
+
+      &__heading,
+      &__sub-heading {
+        text-align: left;
+        width: 50%;
+      }
+      &__img {
+        left: initial;
+        right: -69px;
+        bottom: -225px;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .qualities {
+    padding-inline: 0;
+    width: $width-desktop;
+    margin: 0 auto 150px;
+    flex-direction: row;
+
+    &__card {
+      flex-direction: column;
+    }
+    &__wrapper {
+      align-items: center;
+    }
+    &__sub-heading {
+      text-align: center;
     }
   }
 }
