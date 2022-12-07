@@ -58,3 +58,44 @@ address {
     font-weight: $weight-heading;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .leaflet-container {
+    border-radius: 15px;
+  }
+  .map {
+    gap: 100px;
+
+    &__card {
+      margin-inline: $margin-outside-tablet;
+      border-radius: 15px;
+      gap: 30px;
+      background-color: transparent;
+    }
+    &__location-container {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr;
+      grid-template-rows: min-content min-content;
+      place-content: center;
+      column-gap: 50px;
+      background-color: #fdf3f0;
+      border-radius: 15px;
+      background-position: bottom center;
+      padding-inline: 75px;
+    }
+    &__heading {
+      font-size: 4rem;
+      line-height: 48px;
+      grid-column: 1/3;
+      text-align: left;
+    }
+    &__address-container,
+    &__contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      color: $pri-color-black;
+    }
+  }
+}

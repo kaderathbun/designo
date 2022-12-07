@@ -48,7 +48,7 @@ export default function MapCards() {
           <MapContainer
             center={[location.lat, location.long]}
             zoom={13}
-            scrollWheelZoom={true}
+            scrollWheelZoom={false}
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

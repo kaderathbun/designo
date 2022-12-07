@@ -9,7 +9,12 @@ export default function AboutCards({ image, heading, children, isSecondary }) {
     backgroundPosition: isSecondary ? 'left center' : 'top -150px right 0px',
     backgroundRepeat: isSecondary ? 'repeat' : 'no-repeat',
     backgroundSize: isSecondary ? '100%' : '80%',
-    marginBottom: isSecondary ? '150px' : '',
+  }
+
+  const tabletSecondaryStyles = {
+    backgroundPosition: isSecondary ? 'top right' : {},
+    backgroundRepeat: isSecondary ? 'repeat' : {},
+    backgroundSize: isSecondary ? '50%' : {},
   }
 
   return (

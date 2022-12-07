@@ -1,10 +1,14 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 //styles
 import './About.scss'
-import hero from '../../assets/about/mobile/image-about-hero.jpg'
-import talent from '../../assets/about/mobile/image-world-class-talent.jpg'
-import realDeal from '../../assets/about/mobile/image-real-deal.jpg'
+import heroMobile from '../../assets/about/mobile/image-about-hero.jpg'
+import heroTablet from '../../assets/about/tablet/image-about-hero.jpg'
+import talentMobile from '../../assets/about/mobile/image-world-class-talent.jpg'
+import talentTablet from '../../assets/about/tablet/image-world-class-talent.jpg'
+import realDealMobile from '../../assets/about/mobile/image-real-deal.jpg'
+import realDealTablet from '../../assets/about/tablet/image-real-deal.jpg'
 
 //components
 import AboutCards from '../../Components/AboutCards/AboutCards'
@@ -12,11 +16,17 @@ import Footer from '../../Components/Footer/Footer'
 import LocationCards from '../../Components/LocationCards/LocationCards'
 
 export default function About() {
+  const isTablet = useMediaQuery({ query: '(min-width: 768px)' })
+
   return (
     <React.Fragment>
       <main className="about">
         <section className="mission">
-          <AboutCards image={hero} heading="About Us" isSecondary={false}>
+          <AboutCards
+            image={isTablet ? heroTablet : heroMobile}
+            heading="About Us"
+            isSecondary={false}
+          >
             <p className="mission__sub-heading">
               Founded in 2010, we are a creative agency that produces lasting
               results for our clients. We’ve partnered with many startups,
@@ -28,7 +38,7 @@ export default function About() {
         </section>
         <section className="mission">
           <AboutCards
-            image={talent}
+            image={isTablet ? talentTablet : talentMobile}
             heading="World-class talent"
             isSecondary={true}
           >
@@ -49,8 +59,12 @@ export default function About() {
           <LocationCards />
         </section>
         <section className="mission">
-          <AboutCards image={realDeal} heading="The real deal">
-            <p className="mission__sub-heading">
+          <AboutCards
+            image={isTablet ? realDealTablet : realDealMobile}
+            heading="The real deal"
+            isSecondary={true}
+          >
+            <p className="mission__sub-heading" style={{ color: '#333136' }}>
               As strategic partners in our clients’ businesses, we are ready to
               take on any challenge as our own. Solving real problems require
               empathy and collaboration, and we strive to bring a fresh
