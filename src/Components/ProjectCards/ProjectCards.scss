@@ -88,6 +88,10 @@
     grid-template-rows: 1fr 1fr;
     gap: 15px;
 
+    &__heading {
+      font-size: 4rem;
+      line-height: 48px;
+    }
     &__card {
       height: 100%;
       margin-block: 0;
