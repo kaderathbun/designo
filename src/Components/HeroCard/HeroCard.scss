@@ -49,3 +49,12 @@
     }
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .hero {
+    &__card {
+      width: $width-desktop;
+      margin: 0 auto;
+    }
+  }
+}

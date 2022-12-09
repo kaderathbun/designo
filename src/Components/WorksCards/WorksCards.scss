@@ -13,12 +13,12 @@
     width: 327px;
     background-color: #fdf3f0;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 15px;
   }
   &__image {
     width: 100%;
     height: 320px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 15px 15px 0 0;
   }
   &__container {
     height: 158px;
@@ -63,6 +63,26 @@
     &__container {
       height: 100%;
       padding: $margin-outside-tablet;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .works {
+    width: $width-desktop;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+
+    &__card {
+      flex-direction: column;
+      width: 100%;
+      background-color: #fdf3f0;
+      margin: initial;
+    }
+    &__image {
+      width: 100%;
     }
   }
 }

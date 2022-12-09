@@ -1,4 +1,5 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 //styles
 import './WebDesign.scss'
@@ -68,6 +69,12 @@ const projectCards = [
 ]
 
 export default function WebDesign() {
+  const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' })
+
+  const desktopStyles = {
+    display: 'flex',
+    flexDirection: 'row',
+  }
 
   return (
     <React.Fragment>
